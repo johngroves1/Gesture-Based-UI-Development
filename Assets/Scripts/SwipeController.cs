@@ -6,12 +6,20 @@ public class SwipeController : MonoBehaviour
 {
     public SwipeDetection swipeControls;
     public Transform player;
-    private Vector3 desiredPosition;
 
 
     private void Start()
     {
 
+    }
+
+    void PauseGame()
+    {
+        Time.timeScale = 0;
+    }
+    void ResumeGame()
+    {
+        Time.timeScale = 1;
     }
 
 
@@ -28,16 +36,13 @@ public class SwipeController : MonoBehaviour
         }
         if (swipeControls.SwipeUp)
         {
-
+            ResumeGame();
         }
 
         if (swipeControls.SwipeDown)
         {
-
+            PauseGame();
         }
-
-
-
 
 
     }
