@@ -19,13 +19,13 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
-        if(moveInput < 0)
+        if (moveInput < 0)
         {
             this.GetComponent<SpriteRenderer>().flipX = true;
         }
-        else 
+        else
         {
-             this.GetComponent<SpriteRenderer>().flipX = false;
+            this.GetComponent<SpriteRenderer>().flipX = false;
         }
     }
 
@@ -33,14 +33,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         moveInput = Input.GetAxis("Horizontal");
-<<<<<<< HEAD
-        //rb2d.velocity = new Vector2(moveInput * speed, rb2d.velocity.y); //Keyboard Input
-        rb2d.velocity = new Vector2(Input.acceleration.x * speed, rb2d.velocity.y); // Accelerometer + Gyroscope
-=======
-        rb2d.velocity = new Vector2(moveInput * speed, rb2d.velocity.y);
-        //rb2d.velocity = new Vector2(Input.acceleration.x * speed, rb2d.velocity.y);
-
-
->>>>>>> 3b397c82816594837143dd77962914feef82a451
+        rb2d.velocity = new Vector2(moveInput * speed, rb2d.velocity.y); //Keyboard Input
+        //rb2d.velocity = new Vector2(Input.acceleration.x * speed, rb2d.velocity.y); // Accelerometer + Gyroscope
     }
 }
