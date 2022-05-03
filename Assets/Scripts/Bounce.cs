@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bounce : MonoBehaviour
 {
+    [SerializeField] private AudioClip bounceSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +19,12 @@ public class Bounce : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        SoundController sc = FindObjectOfType<SoundController>();
+
         if(collision.gameObject.GetComponent<Rigidbody2D>().velocity.y <= 0)
         {
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector3.up * 600f);
+            sc.PlayOneShot(bounceSound);
         }
     }
 }
