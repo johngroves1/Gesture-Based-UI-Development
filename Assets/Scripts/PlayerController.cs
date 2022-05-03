@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb2d;
     private float moveInput;
-    private float speed = 10f;
+    private float speed = 25f;
 
 
 
@@ -21,5 +21,6 @@ public class PlayerController : MonoBehaviour
     {
         moveInput = Input.GetAxis("Horizontal");
         rb2d.velocity = new Vector2(moveInput * speed, rb2d.velocity.y);
+        //rb2d.velocity = new Vector2(Input.acceleration.x * speed, rb2d.velocity.y);
     }
 }
