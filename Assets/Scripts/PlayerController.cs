@@ -36,9 +36,9 @@ public class PlayerController : MonoBehaviour
         {
             this.GetComponent<SpriteRenderer>().flipX = true;
         }
-        else 
+        else
         {
-             this.GetComponent<SpriteRenderer>().flipX = false;
+            this.GetComponent<SpriteRenderer>().flipX = false;
         }
 
          if(transform.position.y+50 < topScore)
