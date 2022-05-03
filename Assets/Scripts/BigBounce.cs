@@ -5,6 +5,8 @@ using UnityEngine;
 public class BigBounce : MonoBehaviour
 {
     [SerializeField] private AudioClip bigBounceSound;
+    [SerializeField] private GameObject explosionFX;
+    private float explosionDuration = 1.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,8 @@ public class BigBounce : MonoBehaviour
         {
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector3.up * 1000f);
             sc.PlayOneShot(bigBounceSound);
+             GameObject explosion = Instantiate(explosionFX, transform.position, transform.rotation);
+            Destroy(explosion, explosionDuration);
         }
     }
 }
