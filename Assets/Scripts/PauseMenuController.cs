@@ -7,21 +7,37 @@ public class PauseMenuController : MonoBehaviour
     [SerializeField] private GameObject pauseMenuUI;
     [SerializeField] private bool isPaused;
 
+
+    public SwipeDetection swipeControls;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             isPaused = !isPaused;
         }
 
-        if(isPaused)
+
+
+        if (swipeControls.SwipeUp)
+        {
+            DeactivateMenu();
+        }
+
+        if (swipeControls.SwipeDown)
+        {
+            ActivateMenu();
+        }
+
+        #region "For development, comment out when building apk"
+        if (isPaused)
         {
             ActivateMenu();
         }
@@ -29,6 +45,9 @@ public class PauseMenuController : MonoBehaviour
         {
             DeactivateMenu();
         }
+        #endregion
+
+
     }
 
     // Shows the pause menu and set time scale to 0
@@ -41,7 +60,7 @@ public class PauseMenuController : MonoBehaviour
 
     public void DeactivateMenu()
     {
-        
+
         Time.timeScale = 1;
         AudioListener.pause = false;
         pauseMenuUI.SetActive(false);
