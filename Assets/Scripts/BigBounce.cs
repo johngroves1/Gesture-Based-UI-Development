@@ -19,7 +19,7 @@ public class BigBounce : MonoBehaviour
 
     }
 
-    private void OnColliderEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         SoundController sc = FindObjectOfType<SoundController>();
 
