@@ -142,3 +142,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceSound: {fileID: 8300000, guid: 6765b90969a5d9f458465e629800bb05, type: 3}
+  explosionFX: {fileID: 6915645131981300224, guid: 6532e9536b41a4a49914e4ab2d76f64a,
+    type: 3}
