@@ -24,13 +24,15 @@ public class PauseMenuController : MonoBehaviour
             isPaused = !isPaused;
         }
 
+        //
+
 
 
         if (swipeControls.SwipeUp)
         {
             DeactivateMenu();
         }
-
+        // Swipe down opens pause menu
         if (swipeControls.SwipeDown)
         {
             ActivateMenu();
@@ -49,6 +51,8 @@ public class PauseMenuController : MonoBehaviour
 
 
     }
+
+    //
 
     // Shows the pause menu and set time scale to 0
     void ActivateMenu()
