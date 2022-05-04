@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
+
+    [SerializeField] private GameObject characterMenuUI;
+        [SerializeField] private bool isPaused;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,4 +35,12 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene(0); // Make sure the scene is added in the Build Settings
     }
+
+    public void Char_OnClick()
+    {
+        //isPaused = !isPaused;
+        characterMenuUI.SetActive(true);
+    }
+
+    
 }
