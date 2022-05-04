@@ -1605,6 +1605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1397081297}
   - component: {fileID: 1397081296}
+  - component: {fileID: 1397081298}
   m_Layer: 0
   m_Name: CharacterManager
   m_TagString: Untagged
@@ -1635,6 +1636,7 @@ MonoBehaviour:
   - {fileID: 9100000, guid: 20cf309f379870e4d910a3a032c51691, type: 2}
   - {fileID: 9100000, guid: 996654c6a076ab842b4f6f1b426cafea, type: 2}
   playerskin: {fileID: 182399502}
+  swipeControls: {fileID: 1397081298}
 --- !u!4 &1397081297
 Transform:
   m_ObjectHideFlags: 0
@@ -1649,6 +1651,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1397081298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397081295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed98bc6e0aded34bbec2b18294a75da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1415908380
 GameObject:
   m_ObjectHideFlags: 0

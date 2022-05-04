@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb2d;
+
     private float moveInput;
     private float speed = 10f;
 
@@ -16,6 +17,9 @@ public class PlayerController : MonoBehaviour
 
     public Text scoreText;
     public Text fuelText;
+
+    public GameObject jetpackPrefeb;
+    public GameObject player;
 
 
 
@@ -90,11 +94,27 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name.StartsWith("JetPack"))
+        if (collision.gameObject.name.StartsWith("Jetpack"))
         {
-            fuel = 100f;
+            fuel += 100f;
             //fuelInt = (int)fuel;
+            Debug.Log("Test");
             fuelText.text = fuel.ToString();
+
+            // if (Random.Range(1, 7) == 1)
+            // {
+
+            //     collision.gameObject.transform.position = new Vector2(Random.Range(-4.5f, 4.5f), player.transform.position.y + (10 + Random.Range(0.2f, .5f)));
+
+            // }
+            // else
+            // {
+
+            //     Destroy(collision.gameObject);
+            //     Instantiate(jetpackPrefeb, new Vector2(Random.Range(-4.5f, 4.5f), player.transform.position.y + (10 + Random.Range(0.2f, .5f))), Quaternion.identity);
+
+
+            // }
 
 
 

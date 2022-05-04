@@ -27,12 +27,8 @@ public class Jetpack : MonoBehaviour
 
         Debug.Log("Collision");
 
-        if (collision.gameObject.GetComponent<Rigidbody2D>().velocity.y <= 0)
-        {
-            sc.PlayOneShot(bigBounceSound);
-            GameObject explosion = Instantiate(explosionFX, transform.position, transform.rotation);
-            Destroy(explosion, explosionDuration);
-
-        }
+        sc.PlayOneShot(bigBounceSound);
+        GameObject explosion = Instantiate(explosionFX, transform.position, transform.rotation);
+        Destroy(explosion, explosionDuration);
     }
 }
