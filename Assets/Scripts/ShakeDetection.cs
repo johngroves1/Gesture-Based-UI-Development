@@ -27,7 +27,7 @@ public class ShakeDetection : MonoBehaviour
 
         // Shake Detection
         if (deltaAcceleration.sqrMagnitude >= shakeThreshold)
-            Debug.Log("Shake Detected");
+            UnityEngine.SceneManagement.SceneManager.LoadScene(1);
 
     }
 }
