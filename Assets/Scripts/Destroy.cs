@@ -37,6 +37,7 @@ public class Destroy : MonoBehaviour
 
 
             }
+            //Spawning jetpacks
             if (Random.Range(1, 20) == 1)
             {
 
