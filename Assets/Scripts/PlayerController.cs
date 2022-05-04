@@ -101,20 +101,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Test");
             fuelText.text = fuel.ToString();
 
-            // if (Random.Range(1, 7) == 1)
-            // {
 
-            //     collision.gameObject.transform.position = new Vector2(Random.Range(-4.5f, 4.5f), player.transform.position.y + (10 + Random.Range(0.2f, .5f)));
-
-            // }
-            // else
-            // {
-
-            //     Destroy(collision.gameObject);
-            //     Instantiate(jetpackPrefeb, new Vector2(Random.Range(-4.5f, 4.5f), player.transform.position.y + (10 + Random.Range(0.2f, .5f))), Quaternion.identity);
-
-
-            // }
 
 
 
