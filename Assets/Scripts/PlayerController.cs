@@ -20,6 +20,10 @@ public class PlayerController : MonoBehaviour
 
     public GameObject jetpackPrefeb;
     public GameObject player;
+    [SerializeField] private GameObject jetpackFX;
+    private float jetpackDuration = 0.25f;
+
+    public FuelBar fuelbar;
 
 
 
@@ -62,6 +66,9 @@ public class PlayerController : MonoBehaviour
                 fuel -= 0.1f;
                 fuelInt = (int)fuel;
                 fuelText.text = fuelInt.ToString();
+                GameObject explosion = Instantiate(jetpackFX, transform.position, transform.rotation);
+                Destroy(explosion, jetpackDuration);
+                fuelbar.setFuel(fuel);
             }
 
         }
@@ -100,6 +107,7 @@ public class PlayerController : MonoBehaviour
             //fuelInt = (int)fuel;
             Debug.Log("Test");
             fuelText.text = fuel.ToString();
+            fuelbar.SetMaxFuel(fuel);
 
 
 

@@ -316,6 +316,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5346a6dde4b2ed64cacb6689d39f7728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterMenuUI: {fileID: 0}
+  isPaused: 0
 --- !u!1 &522989178
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,8 +352,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.0000019073, y: -594}
-  m_SizeDelta: {x: 302.44653, y: 60.29773}
+  m_AnchoredPosition: {x: -0.000045776, y: -627.9}
+  m_SizeDelta: {x: 360, y: 82.87099}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &522989180
 MonoBehaviour:
@@ -374,11 +376,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 585188cdc4600544eb408bee749e4b3a, type: 3}
-    m_FontSize: 65
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 65
+    m_MaxSize: 80
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -428,8 +430,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 7.7}
-  m_SizeDelta: {x: 0, y: 15.369125}
+  m_AnchoredPosition: {x: -8.400002, y: -13.799999}
+  m_SizeDelta: {x: 73.81387, y: 36.85923}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &548427149
 MonoBehaviour:
@@ -452,18 +454,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 585188cdc4600544eb408bee749e4b3a, type: 3}
-    m_FontSize: 50
+    m_FontSize: 40
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 50
+    m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: MENU
+  m_Text: HOLD TO RETURN TO MENU
 --- !u!222 &548427150
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -676,7 +678,7 @@ GameObject:
   - component: {fileID: 1387875162}
   - component: {fileID: 1387875161}
   m_Layer: 0
-  m_Name: planet 1
+  m_Name: Planet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -912,7 +914,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -565}
+  m_AnchoredPosition: {x: 0, y: -442}
   m_SizeDelta: {x: 160, y: 42.937393}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1635432780
@@ -1075,7 +1077,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: START
+  m_Text: SHAKE TO RESTART
 --- !u!222 &1900046580
 CanvasRenderer:
   m_ObjectHideFlags: 0

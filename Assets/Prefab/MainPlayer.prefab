@@ -75,6 +75,8 @@ MonoBehaviour:
     type: 3}
   springPrefab: {fileID: 561115785597071974, guid: 761129a11bd643c4591e917a975e472a,
     type: 3}
+  jetpackPrefab: {fileID: 6442941350033118205, guid: acd1b5c30331e7842aea6ecca79a8156,
+    type: 3}
 --- !u!1 &1268343174863914734
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,9 +338,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6753412903299283351}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 996654c6a076ab842b4f6f1b426cafea, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -406,7 +408,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e68aaf2b892d09241b64f9ecee108a65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fuel: 0
+  topScore: 0
   scoreText: {fileID: 0}
+  fuelText: {fileID: 0}
+  jetpackPrefeb: {fileID: 6442941350033118205, guid: acd1b5c30331e7842aea6ecca79a8156,
+    type: 3}
+  player: {fileID: 6753412903299283351}
+  jetpackFX: {fileID: 3643512034064233424, guid: b3767f9c11a417649a76345c3c27dfb9,
+    type: 3}
 --- !u!1001 &3717352390458924347
 PrefabInstance:
   m_ObjectHideFlags: 0

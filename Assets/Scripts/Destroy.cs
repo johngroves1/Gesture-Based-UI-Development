@@ -38,14 +38,14 @@ public class Destroy : MonoBehaviour
 
             }
             //Spawning jetpacks
-            if (Random.Range(1, 20) == 1)
-            {
+            // if (Random.Range(1, 20) == 1)
+            // {
 
-                Destroy(collision.gameObject);
-                Instantiate(jetpackPrefab, new Vector2(Random.Range(-4.5f, 4.5f), player.transform.position.y + (10 + Random.Range(0.2f, .5f))), Quaternion.identity);
+            //     Destroy(collision.gameObject);
+            //     Instantiate(jetpackPrefab, new Vector2(Random.Range(-4.5f, 4.5f), player.transform.position.y + (10 + Random.Range(0.2f, .5f))), Quaternion.identity);
 
 
-            }
+            // }
             else
             {
 
