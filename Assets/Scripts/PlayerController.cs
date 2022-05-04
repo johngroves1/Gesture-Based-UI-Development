@@ -43,8 +43,7 @@ public class PlayerController : MonoBehaviour
 
          if(transform.position.y+50 < topScore)
         {
-           Debug.Log("ded");
-           SceneManager.LoadScene(1);
+           SceneManager.LoadScene(2);
         } 
     }
 

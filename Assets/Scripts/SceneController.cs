@@ -20,6 +20,16 @@ public class SceneController : MonoBehaviour
     // == onClick Event Handlers ==
     public void Start_OnClick()
     {
+        SceneManager.LoadScene(1); // Make sure the scene is added in the Build Settings
+    }
+
+    public void StartGame_OnClick()
+    {
+        SceneManager.LoadScene(1); // Make sure the scene is added in the Build Settings
+    }
+
+    public void Menu_OnClick()
+    {
         SceneManager.LoadScene(0); // Make sure the scene is added in the Build Settings
     }
 }
