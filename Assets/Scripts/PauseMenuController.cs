@@ -5,28 +5,13 @@ using UnityEngine;
 public class PauseMenuController : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenuUI;
-    [SerializeField] private bool isPaused;
-
-
+     public bool isPaused = false;
     public SwipeDetection swipeControls;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            isPaused = !isPaused;
-        }
-
-        //
-
-
 
         if (swipeControls.SwipeUp)
         {
@@ -38,21 +23,7 @@ public class PauseMenuController : MonoBehaviour
             ActivateMenu();
         }
 
-        // #region "For development, comment out when building apk"
-        // if (isPaused)
-        // {
-        //     ActivateMenu();
-        // }
-        // else
-        // {
-        //     DeactivateMenu();
-        // }
-        // #endregion
-
-
     }
-
-    //
 
     // Shows the pause menu and set time scale to 0
     void ActivateMenu()
@@ -60,6 +31,7 @@ public class PauseMenuController : MonoBehaviour
         Time.timeScale = 0;
         AudioListener.pause = true;
         pauseMenuUI.SetActive(true);
+        isPaused = true;
     }
 
     public void DeactivateMenu()

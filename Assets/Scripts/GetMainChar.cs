@@ -26,28 +26,23 @@ public class GetMainChar : MonoBehaviour
         switch(getCharacter)
         {
             case 1:
-                mySprite.sprite = astro;
-                //mySpriteAnimation.runtimeAnimatorController = astroAni;
+                Player.GetComponent<SpriteRenderer>().sprite = astro;  
                 Player.GetComponent<Animator>().runtimeAnimatorController = astroAni;
                 break;
             case 2:
-                mySprite.sprite = cosmic;
-               // mySpriteAnimation.runtimeAnimatorController = cosmicAni;
+                Player.GetComponent<SpriteRenderer>().sprite = cosmic;            
                 Player.GetComponent<Animator>().runtimeAnimatorController = cosmicAni;
                 break;
             case 3:
-                mySprite.sprite = slime;
-                //mySpriteAnimation.runtimeAnimatorController = slimeAni;
+                Player.GetComponent<SpriteRenderer>().sprite = slime;
                 Player.GetComponent<Animator>().runtimeAnimatorController = slimeAni;
                 break;
             case 4:
-                mySprite.sprite = octo;
-               // mySpriteAnimation.runtimeAnimatorController = octoAni;
+                Player.GetComponent<SpriteRenderer>().sprite = cosmic;
                 Player.GetComponent<Animator>().runtimeAnimatorController = octoAni;
                 break;
             default:
-                mySprite.sprite = octo;
-                //mySpriteAnimation.runtimeAnimatorController = octoAni;
+                Player.GetComponent<SpriteRenderer>().sprite = octo;
                 Player.GetComponent<Animator>().runtimeAnimatorController = octoAni;
                 break;
                 

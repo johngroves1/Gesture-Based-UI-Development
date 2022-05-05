@@ -5,19 +5,8 @@ using UnityEngine;
 public class Bounce : MonoBehaviour
 {
     [SerializeField] private AudioClip bounceSound;
-        [SerializeField] private GameObject explosionFX;
+    [SerializeField] private GameObject bounceFX;
     private float explosionDuration = 1.0f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -27,7 +16,7 @@ public class Bounce : MonoBehaviour
         {
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector3.up * 600f);
             sc.PlayOneShot(bounceSound);
-             GameObject explosion = Instantiate(explosionFX, transform.position, transform.rotation);
+             GameObject explosion = Instantiate(bounceFX, transform.position, transform.rotation);
             Destroy(explosion, explosionDuration);
         }
     }

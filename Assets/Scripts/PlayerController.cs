@@ -24,8 +24,9 @@ public class PlayerController : MonoBehaviour
     private float jetpackDuration = 0.25f;
 
     public FuelBar fuelbar;
+
+    public PauseMenuController pmc;
     [SerializeField] private GameObject fuelBarUI;
-    //[SerializeField] private AudioClip jetpackSound;
 
 
 
@@ -61,7 +62,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //For Development - Mousedown to use jetpack
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && pmc.isPaused == false)
         {
             if (fuel > 0)
             {
@@ -79,7 +80,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Use jetpack when holding finger down
-        if (Input.touches.Length > 0)
+        if (Input.touches.Length > 0 && pmc.isPaused == false)
         {
             if (fuel > 0)
             {
@@ -87,13 +88,12 @@ public class PlayerController : MonoBehaviour
                 fuel -= 0.1f;
                 fuelInt = (int)fuel;
                 fuelText.text = fuelInt.ToString();
+                GameObject explosion = Instantiate(jetpackFX, transform.position, transform.rotation);
+                Destroy(explosion, jetpackDuration);
+                fuelbar.setFuel(fuel);
             }
 
         }
-
-
-
-        //collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector3.up * 2000f);
     }
 
     // Update is called once per frame
@@ -108,17 +108,10 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.name.StartsWith("Jetpack"))
         {
-            fuel += 100f;
-            //fuelInt = (int)fuel;
-            Debug.Log("Test");
+            fuel += 100f;;
             fuelText.text = fuel.ToString();
             fuelbar.SetMaxFuel(fuel);
             fuelBarUI.SetActive(true);
-
-
-
-
-
             Destroy(collision.gameObject);
 
         }

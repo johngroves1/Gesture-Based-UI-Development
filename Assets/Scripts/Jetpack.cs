@@ -5,21 +5,8 @@ using UnityEngine;
 public class Jetpack : MonoBehaviour
 {
     [SerializeField] private AudioClip Sound;
-    [SerializeField] private GameObject explosionFX;
+    [SerializeField] private GameObject pickupFX;
     private float explosionDuration = 1.0f;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -27,7 +14,7 @@ public class Jetpack : MonoBehaviour
 
 
         sc.PlayOneShot(Sound);
-        GameObject explosion = Instantiate(explosionFX, transform.position, transform.rotation);
+        GameObject explosion = Instantiate(pickupFX, transform.position, transform.rotation);
         Destroy(explosion, explosionDuration);
     }
 }

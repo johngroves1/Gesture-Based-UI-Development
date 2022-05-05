@@ -6,18 +6,8 @@ public class SceneController : MonoBehaviour
 {
 
     [SerializeField] private GameObject characterMenuUI;
-        [SerializeField] private bool isPaused;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject characters;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
         // Start is called before the first frame update
     // == onClick Event Handlers ==
@@ -38,8 +28,8 @@ public class SceneController : MonoBehaviour
 
     public void Char_OnClick()
     {
-        //isPaused = !isPaused;
         characterMenuUI.SetActive(true);
+        characters.SetActive(true);
     }
 
     

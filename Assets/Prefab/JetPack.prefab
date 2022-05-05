@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 6442941350033118202}
   - component: {fileID: -3455860258773471648}
   - component: {fileID: -5248318554501359663}
+  - component: {fileID: 1686505535}
   m_Layer: 0
-  m_Name: Jetpack
+  m_Name: JetPack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fdba7a3ba31ed4f449b82572fd69359a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7177b599567a78c469a349782f47f4d7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,7 +101,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12, y: 5.12}
+    oldSize: {x: 4.75, y: 5.375}
     newSize: {x: 5.12, y: 5.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -121,6 +122,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efadd221760c6ea4fbdafda19cc32543, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bigBounceSound: {fileID: 8300000, guid: 6765b90969a5d9f458465e629800bb05, type: 3}
-  explosionFX: {fileID: 6017607205328130021, guid: f80f376e2d754db4ab917f9de03c0589,
+  Sound: {fileID: 8300000, guid: 120bbe2c21d2a8b438c030b591ed1e8f, type: 3}
+  pickupFX: {fileID: 1967835574231978638, guid: 3e196c9e632c76841a71cb6e2dc6d010,
     type: 3}
+--- !u!251 &1686505535
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6442941350033118205}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
