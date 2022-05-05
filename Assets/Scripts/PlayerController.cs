@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
 
     public FuelBar fuelbar;
     [SerializeField] private GameObject fuelBarUI;
-        //[SerializeField] private AudioClip jetpackSound;
+    //[SerializeField] private AudioClip jetpackSound;
 
 
 
@@ -100,8 +100,8 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         moveInput = Input.GetAxis("Horizontal");
-        rb2d.velocity = new Vector2(moveInput * speed, rb2d.velocity.y); //Keyboard Input
-        //rb2d.velocity = new Vector2(Input.acceleration.x * speed, rb2d.velocity.y); // Accelerometer + Gyroscope
+        //rb2d.velocity = new Vector2(moveInput * speed, rb2d.velocity.y); //Keyboard Input
+        rb2d.velocity = new Vector2(Input.acceleration.x * speed, rb2d.velocity.y); // Accelerometer + Gyroscope
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

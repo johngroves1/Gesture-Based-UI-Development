@@ -69,12 +69,17 @@ public class CharacterSelectionController : MonoBehaviour
             NextOption();
         }
 
+        if (Input.touches.Length >= 2)
+        {
+            PlayGame();
+        }
+
 
     }
 
     public void PlayGame()
     {
-        PrefabUtility.SaveAsPrefabAsset(playerskin, "Assets/selectedskin.prefab");
+        //PrefabUtility.SaveAsPrefabAsset(playerskin, "Assets/selectedskin.prefab");
         SceneManager.LoadScene(1);
     }
 }

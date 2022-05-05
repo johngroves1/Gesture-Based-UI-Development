@@ -38,16 +38,16 @@ public class PauseMenuController : MonoBehaviour
             ActivateMenu();
         }
 
-        #region "For development, comment out when building apk"
-        if (isPaused)
-        {
-            ActivateMenu();
-        }
-        else
-        {
-            DeactivateMenu();
-        }
-        #endregion
+        // #region "For development, comment out when building apk"
+        // if (isPaused)
+        // {
+        //     ActivateMenu();
+        // }
+        // else
+        // {
+        //     DeactivateMenu();
+        // }
+        // #endregion
 
 
     }
