@@ -29,5 +29,10 @@ public class ShakeDetection : MonoBehaviour
         if (deltaAcceleration.sqrMagnitude >= shakeThreshold)
             UnityEngine.SceneManagement.SceneManager.LoadScene(1);
 
+        // Detects if two fingers are held down on screen and returns to menu
+        if (Input.touches.Length >= 2)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        }
     }
 }
