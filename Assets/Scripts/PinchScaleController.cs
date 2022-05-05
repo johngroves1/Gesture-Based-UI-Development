@@ -8,10 +8,12 @@ public class PinchScaleController : MonoBehaviour, IPointerDownHandler, IPointer
     public float minScale, maxScale;
     private float temp;
     private float scalingRate = 2;
+    private float time = 0.0166666f;
 
     private void Start()
     {
         currentScale = transform.localScale.x;
+
     }
 
     //Using Pointer Events to check if is touching screen
@@ -43,14 +45,16 @@ public class PinchScaleController : MonoBehaviour, IPointerDownHandler, IPointer
                 {
                     if (currentScale < minScale)
                         return;
-                    currentScale -= (Time.deltaTime) * scalingRate;
+                    currentScale -= (time) * scalingRate;
+                    AudioListener.volume = currentScale - 1;
                 }
 
                 else if (temp < distance)
                 {
                     if (currentScale >= maxScale)
                         return;
-                    currentScale += (Time.deltaTime) * scalingRate;
+                    currentScale += (time) * scalingRate;
+                    AudioListener.volume = currentScale - 1;
                 }
 
                 temp = distance;
