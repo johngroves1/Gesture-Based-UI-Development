@@ -17,7 +17,6 @@ public class PlayerController : MonoBehaviour
 
     public Text scoreText;
     public Text fuelText;
-
     public GameObject jetpackPrefeb;
     public GameObject player;
     [SerializeField] private GameObject jetpackFX;
@@ -40,6 +39,7 @@ public class PlayerController : MonoBehaviour
     {
         SoundController sc = FindObjectOfType<SoundController>();
 
+
         if (rb2d.velocity.y > 0 && transform.position.y > topScore)
         {
             topScore = transform.position.y;
@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
 
         scoreText.text = Mathf.Round(topScore).ToString();
 
-        if (moveInput < 0)
+        if (Input.acceleration.x <= 0)
         {
             this.GetComponent<SpriteRenderer>().flipX = false;
         }

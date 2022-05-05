@@ -2135,6 +2135,11 @@ PrefabInstance:
       propertyPath: pmc
       value: 
       objectReference: {fileID: 1458040125}
+    - target: {fileID: 6753412903299283339, guid: ebe658204d14fd048bf5b997443ea3e6,
+        type: 3}
+      propertyPath: test
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6753412903299283349, guid: ebe658204d14fd048bf5b997443ea3e6,
         type: 3}
       propertyPath: m_LocalPosition.x
