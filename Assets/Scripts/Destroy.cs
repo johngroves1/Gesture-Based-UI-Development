@@ -24,6 +24,14 @@ public class Destroy : MonoBehaviour
 
 
             }
+
+            else
+            {
+
+                collision.gameObject.transform.position = new Vector2(Random.Range(-4.5f, 4.5f), player.transform.position.y + (10 + Random.Range(0.2f, .5f)));
+
+            }
+
             //Spawning jetpacks
             // if (Random.Range(1, 20) == 1)
             // {
@@ -33,12 +41,6 @@ public class Destroy : MonoBehaviour
 
 
             // }
-            else
-            {
-
-                collision.gameObject.transform.position = new Vector2(Random.Range(-4.5f, 4.5f), player.transform.position.y + (10 + Random.Range(0.2f, .5f)));
-
-            }
 
         }
         else if (collision.gameObject.name.StartsWith("Spring"))

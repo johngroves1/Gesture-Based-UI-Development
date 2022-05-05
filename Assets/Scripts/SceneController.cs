@@ -9,8 +9,7 @@ public class SceneController : MonoBehaviour
     [SerializeField] private GameObject characters;
 
 
-        // Start is called before the first frame update
-    // == onClick Event Handlers ==
+
     public void Start_OnClick()
     {
         SceneManager.LoadScene(1); // Make sure the scene is added in the Build Settings
@@ -32,5 +31,13 @@ public class SceneController : MonoBehaviour
         characters.SetActive(true);
     }
 
-    
+    private void Update()
+    {
+        if (Input.touches.Length == 1)
+        {
+            Start_OnClick();
+        }
+    }
+
+
 }

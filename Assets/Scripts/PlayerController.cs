@@ -47,14 +47,15 @@ public class PlayerController : MonoBehaviour
 
         scoreText.text = Mathf.Round(topScore).ToString();
 
-        if (Input.acceleration.x <= 0)
+        if (Input.acceleration.x <= 0 && pmc.isPaused == false)
         {
             this.GetComponent<SpriteRenderer>().flipX = false;
         }
-        else
+        else if (Input.acceleration.x >= 0 && pmc.isPaused == false)
         {
             this.GetComponent<SpriteRenderer>().flipX = true;
         }
+
 
         if (transform.position.y + 50 < topScore)
         {
