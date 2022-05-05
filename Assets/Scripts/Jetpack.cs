@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Jetpack : MonoBehaviour
 {
-    [SerializeField] private AudioClip bigBounceSound;
+    [SerializeField] private AudioClip Sound;
     [SerializeField] private GameObject explosionFX;
     private float explosionDuration = 1.0f;
 
@@ -25,9 +25,8 @@ public class Jetpack : MonoBehaviour
     {
         SoundController sc = FindObjectOfType<SoundController>();
 
-        Debug.Log("Collision");
 
-        sc.PlayOneShot(bigBounceSound);
+        sc.PlayOneShot(Sound);
         GameObject explosion = Instantiate(explosionFX, transform.position, transform.rotation);
         Destroy(explosion, explosionDuration);
     }
