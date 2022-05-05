@@ -13,8 +13,9 @@ public class Selector : MonoBehaviour
     private Vector3 OffScreen;
     private int CharacterInt = 1;
     private SpriteRenderer OctoRenderer, AstroRenderer, CosmicRenderer, SlimeRenderer;
-     private Animator OctoAnimator, AstroAnimator, CosmicAnimator, SlimeAnimator;
+    private Animator OctoAnimator, AstroAnimator, CosmicAnimator, SlimeAnimator;
     private readonly string selectedCharacter = "SelectedCharacter";
+    public SwipeDetection swipeControls;
 
     private void Awake()
     {
@@ -31,9 +32,24 @@ public class Selector : MonoBehaviour
         SlimeAnimator = Slime.GetComponent<Animator>();
     }
 
+    private void Update()
+    {
+
+        if (swipeControls.SwipeRight)
+        {
+            NextCharacter();
+        }
+        // Swipe down opens pause menu
+        if (swipeControls.SwipeLeft)
+        {
+            PreviousCharacter();
+        }
+
+    }
+
     public void NextCharacter()
     {
-        switch(CharacterInt)
+        switch (CharacterInt)
         {
             case 1:
                 PlayerPrefs.SetInt(selectedCharacter, 1);
@@ -84,7 +100,7 @@ public class Selector : MonoBehaviour
 
     public void PreviousCharacter()
     {
-         switch(CharacterInt)
+        switch (CharacterInt)
         {
             case 1:
                 PlayerPrefs.SetInt(selectedCharacter, 3);
@@ -128,14 +144,14 @@ public class Selector : MonoBehaviour
                 CharacterInt--;
                 break;
             default:
-            ResetInt();
+                ResetInt();
                 break;
         }
     }
 
     private void ResetInt()
     {
-        if(CharacterInt >= 4)
+        if (CharacterInt >= 4)
         {
             CharacterInt = 1;
         }
