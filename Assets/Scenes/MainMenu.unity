@@ -2545,6 +2545,11 @@ PrefabInstance:
       propertyPath: swipeControls
       value: 
       objectReference: {fileID: 939384079}
+    - target: {fileID: 4050142413544951994, guid: 4490ba59cb1b9a849b0a014565d19259,
+        type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1773629590}
     - target: {fileID: 4050142413544951995, guid: 4490ba59cb1b9a849b0a014565d19259,
         type: 3}
       propertyPath: m_LocalPosition.x
