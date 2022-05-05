@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour
     private float jetpackDuration = 0.25f;
 
     public FuelBar fuelbar;
+    [SerializeField] private GameObject fuelBarUI;
+        //[SerializeField] private AudioClip jetpackSound;
 
 
 
@@ -35,6 +37,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        SoundController sc = FindObjectOfType<SoundController>();
 
         if (rb2d.velocity.y > 0 && transform.position.y > topScore)
         {
@@ -62,6 +65,7 @@ public class PlayerController : MonoBehaviour
         {
             if (fuel > 0)
             {
+
                 rb2d.AddForce(Vector3.up * 5f);
                 fuel -= 0.1f;
                 fuelInt = (int)fuel;
@@ -69,6 +73,7 @@ public class PlayerController : MonoBehaviour
                 GameObject explosion = Instantiate(jetpackFX, transform.position, transform.rotation);
                 Destroy(explosion, jetpackDuration);
                 fuelbar.setFuel(fuel);
+                //sc.PlayOneShot(jetpackSound);
             }
 
         }
@@ -108,6 +113,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Test");
             fuelText.text = fuel.ToString();
             fuelbar.SetMaxFuel(fuel);
+            fuelBarUI.SetActive(true);
 
 
 

@@ -154,7 +154,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0.99002075, y: 0}
   m_SizeDelta: {x: 10.864624, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1253,7 +1253,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1169532892
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1984,6 +1984,11 @@ PrefabInstance:
       propertyPath: fuelbar
       value: 
       objectReference: {fileID: 1169532893}
+    - target: {fileID: 6753412903299283339, guid: ebe658204d14fd048bf5b997443ea3e6,
+        type: 3}
+      propertyPath: fuelBarUI
+      value: 
+      objectReference: {fileID: 1169532891}
     - target: {fileID: 6753412903299283349, guid: ebe658204d14fd048bf5b997443ea3e6,
         type: 3}
       propertyPath: m_LocalPosition.x
