@@ -100,15 +100,15 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         moveInput = Input.GetAxis("Horizontal");
-        rb2d.velocity = new Vector2(moveInput * speed, rb2d.velocity.y); //Keyboard Input
-        //rb2d.velocity = new Vector2(Input.acceleration.x * speed, rb2d.velocity.y); // Accelerometer + Gyroscope
+        //rb2d.velocity = new Vector2(moveInput * speed, rb2d.velocity.y); //Keyboard Input
+        rb2d.velocity = new Vector2(Input.acceleration.x * speed, rb2d.velocity.y); // Accelerometer + Gyroscope
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name.StartsWith("Jetpack"))
         {
-            fuel += 100f;;
+            fuel += 100f; ;
             fuelText.text = fuel.ToString();
             fuelbar.SetMaxFuel(fuel);
             fuelBarUI.SetActive(true);

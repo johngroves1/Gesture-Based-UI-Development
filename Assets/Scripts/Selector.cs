@@ -17,6 +17,8 @@ public class Selector : MonoBehaviour
     private readonly string selectedCharacter = "SelectedCharacter";
     public SwipeDetection swipeControls;
 
+    public GameObject canvas;
+
     private void Awake()
     {
         CharacterPosition = Octo.transform.position;
@@ -43,6 +45,10 @@ public class Selector : MonoBehaviour
         if (swipeControls.SwipeLeft)
         {
             PreviousCharacter();
+        }
+        if (canvas.activeSelf && Input.touches.Length >= 2)
+        {
+            ChangeScene();
         }
 
     }
