@@ -10,8 +10,8 @@ as all relevant submission materials for the project.
 | Project Title | Space Jump - Gesture based Android Game  |
 | Module | Gesture Based UI Development |
 | Course | Bsc (Hons) in Software Development |
-| Video | Text |
-| Document | Text |
+| Video | [Demonstration](https://github.com/johngroves1/Gesture-Based-UI-Development/tree/master/Documentation/Video) |
+| Document | [Project Documentation](https://github.com/johngroves1/Gesture-Based-UI-Development/tree/master/Documentation/Documentation) |
 | Students | [John Groves](https://github.com/johngroves1) & [David O'Loughran](https://github.com/DavidOLoughran) |
 | Lecturer | Damien Costello |
 
