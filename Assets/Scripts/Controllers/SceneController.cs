@@ -35,7 +35,7 @@ public class SceneController : MonoBehaviour
     {
         if (Input.touches.Length == 1)
         {
-            Start_OnClick();
+            Char_OnClick();
         }
     }
 
